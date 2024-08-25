@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+	.btn-label {position: relative;left: -12px;display: inline-block;padding: 6px 12px;background: rgba(0,0,0,0.15);border-radius: 3px 0 0 3px;}
+.btn-labeled {padding-top: 0;padding-bottom: 0;}
+.btn { margin-bottom:10px; }
+ 
+ ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #ff5e14;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+
+
+
+
+  .image-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .image-container:hover img {
+      transform: scale(1.2);
+    }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light" style="background: #d1cdc2;">
+  <a class="navbar-brand" href="#"><img src="https://www.banadi.in/web_theme/images/logo.png" height="60px"> </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    	<li class="nav-item active">
+        <a class="nav-link" href="#"><b></b> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><b></b> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html"><b style="color: white;">Home</b> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><b></b> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="rajputi.html"><b style="color: white;">Rajputi Poshaks</b></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><b></b> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link " href="kurti.html"><b style="color: white;"> Kurti</b>
+        </a>
+       
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><b></b> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="jewellery2.html"><b style="color: white;">Jewellery</b></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><b></b> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="sale.html"><b style="color: white;">Sale</b> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><b></b> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="contact.html"><b style="color: white;">Contact Us</b> <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://www.banadi.in/uploads/home_slider/8f6dfbd34b0ab5a45bf1c791702293d3.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.banadi.in/uploads/home_slider/224e28bffd6d937a9ef66b591752eaf3.jpg" class="d-block w-100" alt="...">
+    </div>
+   
+  </div>
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </button>
+</div><br><br>
+
+<center><b style="font-size: 30px;">NEW ARRIVALS</b></center><br>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+      <div class="image-container">
+			<div class="card" style="border: solid 0.5px;">
+  <img src="https://www.beendani.in/uploads/images/medium/2dd91e8fd0d1579c7c4a65ad7de159c3.jpg" class="card-img-top" alt="...">
+ </div>
+</div>
+		</div>
+
+		<div class="col-md-3">
+       <div class="image-container">
+			<div class="card" style="border: solid 0.5px;">
+  <img src="https://www.beendani.in/uploads/images/medium/0114aaa8b9b084e47a5a4817b67cabc9.jpg" class="card-img-top" alt="...">
+ </div>
+</div>
+		</div>
+
+		<div class="col-md-3">
+       <div class="image-container">
+			<div class="card" style="border: solid 0.5px;">
+  <img src="https://www.beendani.in/uploads/images/medium/2b05de4015ea7c30752dbfd3cc5181eb.jpg" class="card-img-top" alt="...">
+ </div>
+</div>
+		</div>
+
+		<div class="col-md-3">
+       <div class="image-container">
+			<div class="card" style="border: solid 0.5px;">
+  <img src="https://www.beendani.in/uploads/images/medium/8ed03d54f45f22ee87504945c2bea2d4.jpg" class="card-img-top" alt="...">
+ </div>
+</div>
+		</div>
+	</div>
+</div><br>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+       <div class="image-container">
+			<div class="card" style="border: solid 0.5px;">
+  <img src="https://www.beendani.in/uploads/images/medium/224966af942fcd70e1d968fa49571cbc.jpg" class="card-img-top" alt="...">
+ </div>
+</div>
+		</div>
+
+		<div class="col-md-3">
+       <div class="image-container">
+			<div class="card" style="border: solid 0.5px;">
+  <img src="https://www.beendani.in/uploads/images/medium/b6d60c766b7accc64ddf68bf7a483033.jpg" class="card-img-top" alt="...">
+ </div>
+</div>
+		</div>
+
+		<div class="col-md-3">
+       <div class="image-container">
+			<div class="card" style="border: solid 0.5px;">
+  <img src="https://www.beendani.in/uploads/images/medium/266b026cbfd721fb9e44e3d2bf97883d.jpg" class="card-img-top" alt="...">
+ </div>
+</div>
+		</div>
+
+		<div class="col-md-3" >
+       <div class="image-container">
+			<div class="card" style="border: solid 0.5px;">
+  <img src="https://www.beendani.in/uploads/images/medium/110aaa7d1c78fd4fa69257c03a6c2097.jpg" class="card-img-top" alt="...">
+ </div>
+</div>
+		</div>
+	</div>
+</div><br><br>
+
+
+<center><b style="font-size: 30px;">SHOP BY BUDGET</b></center><br>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card">
+  <img src="https://cdn.shopify.com/s/files/1/0665/6222/8454/files/1.png?v=1703523491" class="card-img-top" alt="...">
+ 
+</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="card">
+  <img src="https://cdn.shopify.com/s/files/1/0665/6222/8454/files/2_16fa66d4-ee28-4591-82d4-39a5799e596f.png?v=1703523491" class="card-img-top" alt="...">
+ 
+</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="card">
+  <img src="https://cdn.shopify.com/s/files/1/0665/6222/8454/files/3.png?v=1703523491" class="card-img-top" alt="...">
+ 
+</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="card">
+  <img src="https://cdn.shopify.com/s/files/1/0665/6222/8454/files/4.png?v=1703523491" class="card-img-top" alt="...">
+ 
+</div>
+		</div>
+	</div>
+</div><br><br>
+
+
+<center><b style="font-size: 30px;">CURATED SELECTIONS</b></center><br>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+       <div class="image-container">
+			<div class="card" style="border: solid 0.5px;">
+  <img src="https://cdn.shopify.com/s/files/1/0665/6222/8454/files/2_a6722371-5a8b-4257-950a-15ec21e69dfb.png?v=1703568456" class="card-img-top" alt="...">
+ </div>
+</div>
+		</div>
+
+		<div class="col-md-3">
+       <div class="image-container">
+			<div class="card" style="border: solid 0.5px;">
+  <img src="https://cdn.shopify.com/s/files/1/0665/6222/8454/files/1_e706ae7b-d465-4034-9ea7-90fb1842a8d6.png?v=1703568456" class="card-img-top" alt="...">
+ </div>
+</div>
+		</div>
+
+		<div class="col-md-3">
+       <div class="image-container">
+			<div class="card" style="border: solid 0.5px;">
+  <img src="https://cdn.shopify.com/s/files/1/0665/6222/8454/files/3_9de21288-2928-4069-97b2-8f8aefdd3f35.png?v=1703568456" class="card-img-top" alt="...">
+ </div>
+</div>
+		</div>
+
+		<div class="col-md-3" >
+       <div class="image-container">
+			<div class="card" style="border: solid 0.5px;">
+  <img src="https://cdn.shopify.com/s/files/1/0665/6222/8454/files/4_d60fcd32-20ee-4c89-bd77-eba20b2ee704.png?v=1703568456" class="card-img-top" alt="...">
+ </div>
+</div>
+		</div>
+	</div>
+</div><br><br>
+
+
+<center><b style="font-size: 30px;">CURATED SELECTIONS</b></center><br>
+<div class="container">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://cdn.shopify.com/s/files/1/0665/6222/8454/files/5.png?v=1703570558" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.shopify.com/s/files/1/0665/6222/8454/files/6.png?v=1703570558" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.shopify.com/s/files/1/0665/6222/8454/files/7.png?v=1703570558" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.shopify.com/s/files/1/0665/6222/8454/files/7.png?v=1703570558" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </button>
+</div>
+</div><br><br>
+
+<center><b style="font-size: 30px;">Shop Jewellery by Budget</b></center><br>
+<div class="container">
+	<div class="row">
+		
+
+		<div class="col-md-6">
+			<img src="https://silvermerc.com/cdn/shop/files/2_3_3.png?v=1692887157&width=1000" class="img-fluid" alt="...">
+		</div>
+
+		<div class="col-md-6">
+			<img src="https://silvermerc.com/cdn/shop/files/1_3_ca7c1988-e975-456a-a895-cd65672cf15e.png?v=1692887153&width=1000" class="img-fluid" alt="...">
+		</div>
+
+		
+	</div>
+</div><br><br>
+
+
+
+<center><b style="font-size: 30px;">Wedding Dresses Designs & Home Decor</b></center><br>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="card">
+  <img src="https://khammaghani.in/wp-content/uploads/2023/01/Rajputi-Ring-Jewellery.png"  class="card-img-top" alt="...">
+  <div class="card-body" style="background: #f7f6f2; height: 80px;">
+   <center> <h5 class="card-title">Rings</h5>
+    <p class="card-text" style="color: gold;">33 itemes</p>
+  </center>
+  
+  </div>
+</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="card">
+  <img src="https://khammaghani.in/wp-content/uploads/2023/01/Rajputi-Poshak.png"  class="card-img-top" alt="...">
+  <div class="card-body" style="background: #f7f6f2; height: 80px;">
+   <center> <h5 class="card-title">Rajputi poshak</h5>
+    <p class="card-text" style="color: gold;">23 itemes</p>
+  </center>
+  
+  </div>
+</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="card">
+  <img src="https://khammaghani.in/wp-content/uploads/2023/01/Rajputi-Nath.png"  class="card-img-top" alt="...">
+  <div class="card-body" style="background: #f7f6f2; height: 80px;">
+   <center> <h5 class="card-title">Nath</h5>
+    <p class="card-text" style="color: gold;">17itemes</p>
+  </center>
+  
+  </div>
+</div>
+		</div>
+	</div>
+</div><br>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="card">
+  <img src="https://khammaghani.in/wp-content/uploads/2023/01/Nose-pin-Besar.png"  class="card-img-top" alt="...">
+  <div class="card-body" style="background: #f7f6f2; height: 80px;">
+   <center> <h5 class="card-title">Rings</h5>
+    <p class="card-text" style="color: gold;">33 itemes</p>
+  </center>
+  
+  </div>
+</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="card">
+  <img src="https://khammaghani.in/wp-content/uploads/2023/01/Rajputi-combo-set-jewellery.png"  class="card-img-top" alt="...">
+  <div class="card-body" style="background: #f7f6f2; height: 80px;">
+   <center> <h5 class="card-title">Rajputi poshak</h5>
+    <p class="card-text" style="color: gold;">23 itemes</p>
+  </center>
+  
+  </div>
+</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="card">
+  <img src="https://khammaghani.in/wp-content/uploads/2023/01/Kundan-Jewellery.png"  class="card-img-top" alt="...">
+  <div class="card-body" style="background: #f7f6f2; height: 80px;">
+   <center> <h5 class="card-title">Nath</h5>
+    <p class="card-text" style="color: gold;">17itemes</p>
+  </center>
+  
+  </div>
+</div>
+		</div>
+	</div>
+</div><br><br>
+<div style="background: #ebeae8;">
+<center><b style="font-size: 30px;">Wedding jewellery</b></center><br>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+
+			<div class="card">
+  <img src="https://www.beendani.in/uploads/images/medium/704471f0c66fd70823375d2b81eb437f.jpg" class="card-img-top" alt="...">
+ 
+   <center> <p>price<del>12000</del>/ <b>11500</b>only_</p>
+   	    <button type="button" class="btn btn-labeled btn-success">
+                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Success</button>
+            <button type="button" class="btn btn-labeled btn-danger">
+                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Cancel</button>
+</center>
+  
+ 
+</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="card">
+  <img src="https://www.beendani.in/uploads/images/medium/7753f4d9ae611c3a30f07fc998936390.jpg" class="card-img-top" alt="...">
+ 
+   <center> <p>price<del>22000</del>/ <b>19500</b>only_</p>
+   	 <button type="button" class="btn btn-labeled btn-success">
+                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Success</button>
+            <button type="button" class="btn btn-labeled btn-danger">
+                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Cancel</button>
+</center>
+  
+ 
+</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="card">
+  <img src="https://www.beendani.in/uploads/images/medium/53be9cf8d0cfd1c02e21cd0dc7aabb7b.jpg" class="card-img-top" alt="...">
+ 
+   <center> <p>price<del>20000</del>/ <b>18500</b>only_</p>
+   	 <button type="button" class="btn btn-labeled btn-success">
+                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Success</button>
+            <button type="button" class="btn btn-labeled btn-danger">
+                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Cancel</button>
+</center>
+  
+ 
+</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="card">
+  <img src="https://www.beendani.in/uploads/images/medium/551f881de0b0e3e4b3e2fbbc9e348317.jpg" class="card-img-top" alt="...">
+ 
+   <center> <p>price<del>16000</del>/ <b>14500</b>only_</p>
+   	 <button type="button" class="btn btn-labeled btn-success">
+                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Success</button>
+            <button type="button" class="btn btn-labeled btn-danger">
+                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Cancel</button>
+</center>
+  
+ 
+</div>
+		</div>
+	</div>
+</div><br>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="card">
+  <img src="https://www.beendani.in/uploads/images/medium/dd8470c3bf8d5a53045b931082bd1bf4.jpg" class="card-img-top" alt="...">
+ 
+   <center> <p>price<del>12000</del>/ <b>11500</b>only_</p>
+   	 <button type="button" class="btn btn-labeled btn-success">
+                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Success</button>
+            <button type="button" class="btn btn-labeled btn-danger">
+                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Cancel</button>
+</center>
+  
+ 
+</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="card">
+  <img src="https://www.beendani.in/uploads/images/medium/0d01f1c7281799e3bf745cb311ef9deb.jpg" class="card-img-top" alt="...">
+ 
+   <center> <p>price<del>22000</del>/ <b>19500</b>only_</p>
+   	 <button type="button" class="btn btn-labeled btn-success">
+                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Success</button>
+            <button type="button" class="btn btn-labeled btn-danger">
+                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Cancel</button>
+</center>
+  
+ 
+</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="card">
+  <img src="https://www.beendani.in/uploads/images/medium/c84148b4f20353df50667a2c306c0cfe.jpg" class="card-img-top" alt="...">
+ 
+   <center> <p>price<del>20000</del>/ <b>18500</b>only_</p>
+   	 <button type="button" class="btn btn-labeled btn-success">
+                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Success</button>
+            <button type="button" class="btn btn-labeled btn-danger">
+                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Cancel</button>
+</center>
+  
+ 
+</div>
+		</div>
+
+		<div class="col-md-3">
+			<div class="card">
+  <img src="https://www.beendani.in/uploads/images/medium/01b3973b38bbb55c875bf365bc997b9f.jpg" class="card-img-top" alt="...">
+ 
+   <center> <p>price<del>16000</del>/ <b>14500</b>only_</p>
+   	 <button type="button" class="btn btn-labeled btn-success">
+                <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>Success</button>
+            <button type="button" class="btn btn-labeled btn-danger">
+                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>Cancel</button>
+</center>
+  
+ 
+</div>
+		</div>
+	</div>
+</div><br><br>
+</div><br><br>
+
+<center><b style="font-size: 30px;">Wedding jewellery</b></center><br>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<img src="https://www.kalyanjewellers.net/images/banners/gifts_banner.jpg" class="img-fluid" alt="..." style="border: solid red 0.7px;">
+		</div>
+
+		<div class="col-md-6">
+			<img src="https://www.kalyanjewellers.net/images/investors-banner.jpg?v=3" class="img-fluid" alt="..."
+			style="border: solid red 0.7px;">
+		</div>
+	</div>
+</div>
+<br><br>
+<div class="container">
+	<div class="row">
+		<div class="col-md-1"></div>
+		<div class="col-md-10">
+			<center>
+			<b style="font-size: 24px;">
+				
+Shop By Category<br>
+Elevate Your Style With Silvermerc Jewellery
+			</b><br><br>
+			<p>At Silvermerc, we are dedicated to redefining elegance with our exquisite range of designer and traditional jewellery. Our brand is a contemporary embodiment of timeless craftsmanship, sophistication, and a unique design ethos.</p><br>
+
+			<b style="font-size: 24px;">Explore Our Exquisite Collection</b><br><br>
+        <p>Step into a world where traditional artistry meets contemporary trends, all infused with our distinctive touch. We specialize in transforming semi-precious stones into heritage chic designs, offering you "Affordable Luxury" at its finest. Discover our captivating categories:</p><br>
+
+        <b  style="font-size: 24px;">Silver Jewellery</b><br><br>
+        <p>Discover the elegance of silver jewelry online with Silvermerc's finely crafted pieces. Our collection spans two exquisite categories:</p>
+		</center>
+		</div>
+		<div class="col-md-1"></div>
+	</div>
+</div><br><br>
+
+
+
+
+
+  
+
+
+<footer class="footer-section">
+        <div class="container">
+            <div class="footer-cta pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cta-text">
+                                <h4>Find us</h4>
+                                <span>1010 Avenue, sw 54321, chandigarh</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="fas fa-phone"></i>
+                            <div class="cta-text">
+                                <h4>Call us</h4>
+                                <span>9876543210 0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4 mb-30">
+                        <div class="single-cta">
+                            <i class="far fa-envelope-open"></i>
+                            <div class="cta-text">
+                                <h4>Mail us</h4>
+                                <span>mail@info.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="https://www.banadi.in/web_theme/images/logo.png" class="img-fluid" alt="logo"></a>
+                            </div>
+                            <div class="footer-text">
+                                <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                                elit,Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <div class="footer-social-icon">
+                                <span>Follow us</span>
+                                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Useful Links</h3>
+                            </div>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="rajputi.html">
+                                           Rajputi Poshaks
+                                   </a></li>
+                                <li><a href="kurti.html">
+                                         Kurti
+                                         </a></li>
+                                <li><a href="jewellery2.html">Jewellery</a></li>
+                                <li><a href="sale.html">Sale</a></li>
+                                 <li><a href="contact.html">Contact Us</a></li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3>Subscribe</h3>
+                            </div>
+                            <div class="footer-text mb-25">
+                                <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                            </div>
+                            <div class="subscribe-form">
+                                <form action="#">
+                                    <input type="text" placeholder="Email Address">
+                                    <button><i class="fab fa-telegram-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                        <div class="copyright-text">
+                            <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Anup</a></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Privacy</a></li>
+                                <li><a href="#">Policy</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
